@@ -1,0 +1,46 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+ body {
+    background-color: blanchedalmond;
+ }
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+#gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    width: 70%;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.image-item img {
+    width: 350px;
+    height: 350px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    #gallery {
+        width: 90%;
+    }
+}
